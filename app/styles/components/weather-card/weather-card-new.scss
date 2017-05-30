@@ -4,9 +4,18 @@
   &.weather-card-new-add {
     border: 2px dashed;
     cursor: pointer;
-    font-size: 10rem;
-    justify-content: center;
   }
+}
+
+.weather-card-new-empty {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.weather-card-new-placeholder {
+  font-size: 10rem;
 }
 
 .weather-card-new-form {
@@ -37,7 +46,7 @@
   box-sizing: border-box;
   display: block;
   font-size: 1.4rem;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
   padding: 1rem;
   transition: border 0.25s;
   width: 100%;
@@ -46,6 +55,13 @@
     outline: 0;
     border-bottom-color: $card-input-focus;
   }
+}
+
+.weather-card-new-input-error {
+  color: $card-input-error;
+  font-size: 1.2rem;
+  font-style: italic;
+  height: 3rem;
 }
 
 .weather-card-new-select {
@@ -77,6 +93,15 @@
 
   &:hover {
     background-color: $card-submit-bg-hover;
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+    font-style: italic;
+
+    &:hover {
+      background-color: $card-submit-bg;
+    }
   }
 }
 
