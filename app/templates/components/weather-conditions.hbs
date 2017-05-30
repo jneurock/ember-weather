@@ -1,1 +1,22 @@
-{{yield}}
+<header class="weather-conditions-header">
+  <div class="weather-conditions-location">
+    {{conditions.location}}
+  </div>
+  <div class="weather-conditions-country">
+    {{conditions.country.name}}
+  </div>
+</header>
+<section class="weather-conditions-card">
+  <div class="weather-conditions-icon">
+    <img src="{{conditions.iconURL}}" alt="{{conditions.iconDescription}}">
+  </div>
+  <div class="weather-conditions-temp">
+    {{conditions.temperature}}
+  </div>
+  <div class="weather-conditions-summary">
+    {{conditions.summary}}
+  </div>
+</section>
+<footer class="weather-conditions-footer">
+  <button class="weather-conditions-remove" {{action "remove"}}>Remove</button>
+</footer>

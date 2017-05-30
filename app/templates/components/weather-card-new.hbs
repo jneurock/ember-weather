@@ -1,1 +1,30 @@
-{{yield}}
+{{#if isEditing}}
+  <form onsubmit={{action "submit"}}>
+    <fieldset class="weather-card-new-fieldset">
+      <label class="weather-card-new-label" for="weather-card-new-input">
+        Enter city or zip code
+      </label>
+      {{input class="weather-card-new-input"
+              name="weather-card-new-input"
+              placeholder="E.g., Paris or 90210"
+              maxlength="60"
+              value=location
+              input="locationChanged"}}
+      <label class="weather-card-new-label" for="weather-card-new-country">
+        Country
+      </label>
+      <select class="weather-card-new-select" onchange={{action "countryChanged"}} name="weather-card-new-country">
+        <option value="">Select a country &hellips;</option>
+        {{#each countries as |country|}}
+          <option value="{{country.id}}">{{country.name}}</option>
+        {{/each}}
+      </select>
+    </fieldset>
+    <div class="weather-card-new-controls">
+      <button class="weatehr-card-new-submit" type="submit">Submit</button>
+      <button class="weather-card-new-cancel">Cancel</button>
+    </div>
+  </form>
+{{else}}
+  <div class="weather-card-new-add" {{action "add"}}>+</div>
+{{/if}}
