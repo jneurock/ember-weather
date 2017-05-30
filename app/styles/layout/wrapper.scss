@@ -1,0 +1,17 @@
+.wrapper {
+  padding: 0 2rem;
+
+  @include md-breakpoint {
+    margin: 0 auto;
+    max-width: 44rem;
+  }
+
+  @include lg-breakpoint {
+    max-width: 68rem;
+    padding: 0 4rem;
+  }
+
+  @include xl-breakpoint {
+    max-width: 96rem;
+  }
+}

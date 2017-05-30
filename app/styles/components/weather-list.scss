@@ -1,0 +1,8 @@
+.weather-list {
+  @include md-breakpoint {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
