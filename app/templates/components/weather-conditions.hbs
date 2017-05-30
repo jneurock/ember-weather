@@ -6,15 +6,13 @@
     {{conditions.country.name}}
   </div>
 </header>
-<section class="weather-conditions-card">
-  <div class="weather-conditions-icon">
-    <img src="{{conditions.iconURL}}" alt="{{conditions.iconDescription}}">
-  </div>
-  <div class="weather-conditions-temp">
-    {{conditions.temperature}}
+<section class="weather-conditions-body">
+  <img class="weather-conditions-icon" src="{{iconURL}}" alt="{{conditions.iconDescription}}">
+  <div class="weather-conditions-temperature">
+    {{conditions.temperature}} &deg;{{config.temperatureUnit}}
   </div>
   <div class="weather-conditions-summary">
-    {{conditions.summary}}
+    {{summary}}
   </div>
 </section>
 <footer class="weather-conditions-footer">
