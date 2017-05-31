@@ -13,6 +13,7 @@ View a demo here [https://vikingglory.com/ember-weather](https://vikingglory.com
 * There's surely a better way to handle weather conditions adapter errors
 * Models would expire since they are time-sensitive
 * Animated transitions
+* Loading states
 * ARIA attributes
 * More browser testing
 * Some acceptance testing
