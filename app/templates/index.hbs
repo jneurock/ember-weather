@@ -5,11 +5,14 @@
       Add places from all over the world below to view their current weather
       conditions.
     </p>
+    <div class="header-geo-location-error">
+      {{geoLocationError}}
+    </div>
   </div>
 </header>
 <main class="main">
   <div class="wrapper">
-    {{weather-list}}
+    {{weather-list geoLocationFail=(action "geoLocationFail")}}
   </div>
 </main>
 <footer class="footer">

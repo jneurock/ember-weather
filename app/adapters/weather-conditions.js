@@ -25,16 +25,23 @@ function adapt(data, id) {
   }
 }
 
-function formatId(id) {
-  return id.replace(/-/g, ',');
+function getParamsFromId(id) {
+  let latDashLonPattern = /^(-?[\d\.]+)-(-?[\d\.]+)$/;
+  let latLon = id.match(latDashLonPattern);
+
+  if (latLon) {
+    return `lat=${latLon[1]}&lon=${latLon[2]}`;
+  }
+
+  return `q=${id.replace(/-/g, ',')}`;
 }
 
 export default DS.Adapter.extend({
   findRecord(store, type, id) {
     return new Ember.RSVP.Promise(function(resolve, reject) {
-      let formattedId = formatId(id);
+      let params = getParamsFromId(id);
 
-      Ember.$.getJSON(`api/conditions/?q=${formattedId}`).then(function(data) {
+      Ember.$.getJSON(`api/conditions/?${params}`).then(function(data) {
         let adaptedData = adapt(data, id);
 
         if (adaptedData instanceof Error) {
