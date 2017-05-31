@@ -1,3 +1,15 @@
 .weather-card {
   @include weather-card;
 }
+
+.weather-card-remove {
+  @include weather-card-btn;
+
+  background-color: $card-cancel-bg;
+  color: $fg-color;
+  width: 100%;
+
+  &:hover {
+    background-color: $card-cancel-bg-hover;
+  }
+}

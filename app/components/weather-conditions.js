@@ -31,11 +31,5 @@ export default Ember.Component.extend({
     }
 
     return `winds of ${speed} ${this.get('config.windUnit')}`;
-  },
-
-  actions: {
-    remove() {
-      this.get('remove')(this.get('conditions.id'));
-    }
   }
 });

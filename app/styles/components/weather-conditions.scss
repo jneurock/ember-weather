@@ -18,15 +18,3 @@
   font-size: 3rem;
   margin-bottom: 1rem;
 }
-
-.weather-conditions-remove {
-  @include weather-card-btn;
-
-  background-color: $card-cancel-bg;
-  color: $fg-color;
-  width: 100%;
-
-  &:hover {
-    background-color: $card-cancel-bg-hover;
-  }
-}
