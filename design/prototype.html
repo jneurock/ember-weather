@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Weather Conditions</title>
+    <meta name="description" content="View the current weather conditions all over the world.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="prototype.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrapper">
+        <h1>Weather Conditions</h1>
+        <p>
+          Add places from all over the world below to view their current
+          weather conditions.
+        </p>
+      </div>
+    </header>
+    <main class="main">
+      <div class="wrapper">
+        <div class="c-wrapper">
+          <!-- Portland, OR -->
+          <div class="c">
+            <header class="c-header">
+              <div class="c-location">Portland, OR</div>
+              <div class="c-country">United States</div>
+            </header>
+            <section class="c-card">
+              <div class="c-icon">🌤</div>
+              <div class="c-temp">63 &deg;F</div>
+              <div class="c-summary">
+                Partly cloudy with winds out of the SW at 6 mph.
+              </div>
+            </section>
+            <footer class="c-footer">
+              <button class="c-remove">Remove</button>
+            </footer>
+          </div>
+          <!-- Edit -->
+          <div class="c">
+            <form class="c-form">
+              <fieldset class="c-fieldset">
+                <label class="c-label" for="city-zip">Enter city or zip code</label>
+                <input class="c-input" type="text" placeholder="E.g., Paris or 90210" maxlength="75">
+                <label class="c-label" for="country">Country</label>
+                <select class="c-select">
+                  <option value="0">Select a country...</option>
+                  <option value="US">United States</option>
+                  <option value="UK">United Kingdom</option>
+                  <option value="DE">Germany</option>
+                </select>
+              </fieldset>
+              <div class="c-controls">
+                <button class="c-submit" type="submit">Submit</button>
+                <button class="c-cancel">Cancel</button>
+              </div>
+            </form>
+          </div>
+          <!-- New -->
+          <div class="c c-add">+</div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="wrapper">
+        <p>Powered by:</p>
+        <img class="footer-logo" src="../public/images/open-weather-map.svg" alt="Open Weather Map">
+      </div>
+    </footer>
+    </div>
+  </body>
+</html>

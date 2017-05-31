@@ -1,30 +1,21 @@
-Welcome to the interview task :)
-===============================
+# Ember Weather
 
-If something is not clear or you need help - just ask :smile:. Nobody knows everything!
+This is a tiny [Ember](http://emberjs.com) app that displays weather conditions from locations around the world. It's just a little demo application and isn't a project open to collaboration.
 
-1. Read the task
-2. Create a project
-3. Please implement the project according to your own best standards, possibly
-   - Tests, tdd
-   - Code guidelines
-   - Structure / architecture
-   - Refactoring
-   - Conventions
-4. For the layout bootstrap or plain design is enough.
-5. Make sure to commit frequently and feel free to stop working on it after 1-2 hours
-6. Provide an overview which points you would improve if you had more time to work on the project
+## Demo
 
-Scenario - Weathermap api client
----------------------------
+View a demo here [https://vikingglory.com/ember-weather]().
 
-Your app should be a client for the [Open Weather Map API](http://openweathermap.org/API#weather) JSON api
+### Things that could be better
 
-Features that should work:
-
-* Display the weather at random geographic coordinates
-* A form with city and country that fetches and displays the weather in this city
-  - optional: cache the fetched weather data
-* Gracefully handle the case where the city could not be found (display the information to the user)
-
-Have fun!
+* Don't hard-code the list of countries
+* Don't hard-code the weather adapter
+* There's surely a better way to handle weather conditions adapter errors
+* Models would expire since they are time-sensitive
+* Animated transitions
+* ARIA attributes
+* More browser testing
+* Some acceptance testing
+* More thorough tests
+* Better parsing of location names
+* Displaying a map instead of cards?

@@ -7,6 +7,7 @@ capybara-*.html
 /.bundle
 /vendor/bundle
 /log/*
+/dist
 /tmp/*
 /db/*.sqlite3
 /public/system/*
@@ -17,3 +18,9 @@ rerun.txt
 pickle-email-*.html
 .project
 config/initializers/secret_token.rb
+/node_modules
+/bower_components
+/connect.lock
+/libpeerconnection.log
+npm-debug.log*
+testem.log/.sass-cache

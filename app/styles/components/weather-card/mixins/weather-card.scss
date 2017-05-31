@@ -1,0 +1,21 @@
+@mixin weather-card {
+  background: $card-bg;
+  border-radius: 0.4rem;
+  box-sizing: border-box;
+  color: $fg-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 2rem;
+  min-height: 27.5rem;
+  text-align: center;
+  width: 22rem;
+}
+
+@mixin weather-card-btn {
+  border: none;
+  cursor: pointer;
+  height: 4rem;
+  margin: 0;
+  transition: background-color 0.25s;
+}

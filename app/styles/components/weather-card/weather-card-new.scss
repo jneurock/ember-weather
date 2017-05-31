@@ -1,0 +1,124 @@
+.weather-card-new {
+  @include weather-card;
+
+  &.weather-card-new-add {
+    border: 2px dashed;
+    cursor: pointer;
+  }
+}
+
+.weather-card-new-empty {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.weather-card-new-placeholder {
+  font-size: 10rem;
+}
+
+.weather-card-new-form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  font-size: 1.4rem;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.weather-card-new-fieldset {
+  border: none;
+  margin: 0;
+  padding: 2rem;
+}
+
+.weather-card-new-label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.weather-card-new-input {
+  background-color: $card-input-bg;
+  color: $fg-color;
+  border: none;
+  border-bottom: 3px solid $fg-color;
+  box-sizing: border-box;
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  transition: border 0.25s;
+  width: 100%;
+
+  &:focus {
+    outline: 0;
+    border-bottom-color: $card-input-focus;
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:focus {
+    box-shadow: 0 0 0 3rem $card-input-bg inset;
+    -webkit-text-fill-color: $fg-color;
+  }
+}
+
+.weather-card-new-input-error {
+  color: $card-input-error;
+  font-size: 1.2rem;
+  font-style: italic;
+  height: 3rem;
+}
+
+.weather-card-new-select {
+  -moz-appearance: initial;
+  -webkit-appearance: initial;
+  background-color: $card-input-bg;
+  border: none;
+  border-radius: 0;
+  color: $fg-color;
+  display: block;
+  font-size: 1.4rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.weather-card-new-controls {
+  display: flex;
+}
+
+.weather-card-new-btn {
+  @include weather-card-btn;
+}
+
+.weather-card-new-submit {
+  background-color: $card-submit-bg;
+  border-radius: 0 0 0 0.4rem;
+  color: $card-submit-fg;
+  flex-grow: 2;
+  font-weight: 500;
+
+  &:hover {
+    background-color: $card-submit-bg-hover;
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+    font-style: italic;
+
+    &:hover {
+      background-color: $card-submit-bg;
+    }
+  }
+}
+
+.weather-card-new-cancel {
+  background-color: $card-cancel-bg;
+  border-radius: 0 0 0.4rem 0;
+  color: $fg-color;
+  flex-grow: 1;
+
+  &:hover {
+    background-color: $card-cancel-bg-hover;
+  }
+}

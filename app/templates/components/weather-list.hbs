@@ -1,0 +1,4 @@
+{{#each weatherConditions as |conditions|}}
+  {{weather-card conditions=conditions remove=(action "removeCard" conditions)}}
+{{/each}}
+{{weather-card-new add=(action "addCard")}}

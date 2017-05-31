@@ -1,0 +1,17 @@
+<header class="weather-conditions-header">
+  <div class="weather-conditions-location">
+    {{conditions.location}}
+  </div>
+  <div class="weather-conditions-country">
+    {{conditions.country.name}}
+  </div>
+</header>
+<section class="weather-conditions-body">
+  <img class="weather-conditions-icon" src="{{iconURL}}" alt="{{conditions.iconDescription}}">
+  <div class="weather-conditions-temperature">
+    {{conditions.temperature}} &deg;{{config.temperatureUnit}}
+  </div>
+  <div class="weather-conditions-summary">
+    {{{summary}}}
+  </div>
+</section>
