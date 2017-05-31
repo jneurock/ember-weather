@@ -31,6 +31,6 @@ export default Ember.Component.extend({
       return 'calm winds';
     }
 
-    return `winds of ${speed} ${this.get('config.windUnit')}`;
+    return `winds of ${speed}&nbsp;${this.get('config.windUnit')}`;
   }
 });
