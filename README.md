@@ -4,7 +4,7 @@ This is a tiny [Ember](http://emberjs.com) app that displays weather conditions 
 
 ## Demo
 
-View a demo here [https://vikingglory.com/ember-weather]().
+View a demo here [https://vikingglory.com/ember-weather](https://vikingglory.com/ember-weather).
 
 ### Things that could be better
 
