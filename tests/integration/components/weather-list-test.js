@@ -61,9 +61,9 @@ test('it rejects invalid additions to the list', function(assert) {
   this.render(hbs`{{weather-list}}`);
 
   this.$('.weather-card-new-empty').click();
-  this.$('.weather-card-input').val('00000').trigger('input');
-  this.$('.weather-card-select').val('US').change();
-  this.$('.weather-card-submit').click();
+  this.$('.weather-card-new-input').val('00000').trigger('input');
+  this.$('.weather-card-new-select').val('US').change();
+  this.$('.weather-card-new-submit').click();
 
   assert.equal(this.$('.weather-card-new-input-error').length, 1,
     'The invalid card was not added');

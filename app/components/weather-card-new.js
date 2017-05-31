@@ -51,9 +51,11 @@ export default Ember.Component.extend({
     submit(e) {
       e.preventDefault();
 
-      this.get('add')(this.get('location'), this.get('country'))
-        .then(() => this.set('isEditing', false))
-        .catch(ex => this.set('inputError', ex.message));
+      Ember.run(() => {
+        this.get('add')(this.get('location'), this.get('country'))
+          .then(() => this.set('isEditing', false))
+          .catch(ex => this.set('inputError', ex.message));
+      });
     }
   }
 });

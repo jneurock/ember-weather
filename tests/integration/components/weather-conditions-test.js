@@ -30,6 +30,6 @@ test('it displays the conditions', function(assert) {
   assert.equal(this.$(`${CLASS_NAME}-temperature`).text().trim(), `17 °C`,
     'The temperate is shown');
 
-  assert.equal(this.$(`${CLASS_NAME}-summary`).text().trim(),
+  assert.equal(this.$(`${CLASS_NAME}-summary`).text().trim().replace(/\s/g, ' '),
     `6:00 pm – ${PDX.description} with winds of ${PDX.windSpeed} kph.`);
 });
