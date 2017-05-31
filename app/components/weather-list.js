@@ -17,11 +17,13 @@ export default Ember.Component.extend({
   },
 
   getGeoLocation() {
-    navigator.geolocation.getCurrentPosition(
-      position => this.geoLocationSuccess(position),
-      positionError => this.geoLocationFail(positionError),
-      { timeout: GEO_LOC_TIMEOUT }
-    );
+    if (!Ember.testing) {
+      navigator.geolocation.getCurrentPosition(
+        position => this.geoLocationSuccess(position),
+        positionError => this.geoLocationFail(positionError),
+        { timeout: GEO_LOC_TIMEOUT }
+      );
+    }
   },
 
   geoLocationSuccess(position) {

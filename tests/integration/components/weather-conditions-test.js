@@ -1,4 +1,3 @@
-import Ember from 'ember';
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 import { PDX } from '../../mocks/conditions';
@@ -22,7 +21,7 @@ test('it displays the conditions', function(assert) {
   assert.equal(this.$(`${CLASS_NAME}-country`).text().trim(), PDX.country.name,
     'The country is shown');
 
-  assert.equal(icon.attr('src'), `http://openweathermap.org/img/w/${PDX.icon}`,
+  assert.equal(icon.attr('src'), `http://openweathermap.org/img/w/${PDX.icon}.png`,
     'The icon source is correct');
 
   assert.equal(icon.attr('alt'), PDX.iconDescription,

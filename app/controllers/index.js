@@ -9,7 +9,7 @@ export default Ember.Controller.extend({
   geoLocationError: null,
 
   transitionGeoLocationError() {
-    return new Promise(resolve => {
+    return new Ember.RSVP.Promise(resolve => {
       let $error = Ember.$('.header-geo-location-error');
 
       setTimeout(() => {
