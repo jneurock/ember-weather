@@ -4,6 +4,8 @@ import DS from 'ember-data';
 const { computed, inject } = Ember;
 
 export default Ember.Component.extend({
+  store: inject.service(),
+
   classNames: 'weather-card-new',
   classNameBindings: 'isEditing::weather-card-new-add',
   countries: null,
@@ -11,7 +13,6 @@ export default Ember.Component.extend({
   inputError: null,
   isEditing: false,
   location: '',
-  store: inject.service(),
 
   init() {
     this._super(...arguments);
@@ -47,8 +48,12 @@ export default Ember.Component.extend({
       this.set('inputError', null);
     },
 
-    submit() {
-      let result = this.get('submit')();
+    submit(e) {
+      e.preventDefault();
+
+      this.get('add')(this.get('location'), this.get('country'))
+        .then(() => this.set('isEditing', false))
+        .catch(ex => this.set('inputError', ex.message));
     }
   }
 });

@@ -7,12 +7,14 @@ import DS from 'ember-data';
  */
 function adapt(data, id) {
   try {
+    let weather = data.weather[0];
+
     return {
       country: data.sys.country,
-      date: data.dt,
-      description: data.weather.main,
-      icon: data.weather.icon,
-      iconDescription: data.weather.description,
+      date: data.dt * 1000,
+      description: weather.main,
+      icon: weather.icon,
+      iconDescription: weather.description,
       id,
       location: data.name,
       temperature: data.main.temp,

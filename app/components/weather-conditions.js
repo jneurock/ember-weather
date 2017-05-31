@@ -9,10 +9,11 @@ export default Ember.Component.extend({
   config: inject.service(),
 
   iconURL: computed('conditions.icon', function() {
-    let prefix = this.get('config.iconPrefix');
+    let extension = this.get('config.iconExtension');
     let icon = this.get('conditions.icon');
+    let prefix = this.get('config.iconPrefix');
 
-    return `${prefix}${icon}`;
+    return `${prefix}${icon}${extension}`;
   }),
 
   summary: computed('conditions.temperature', function() {
